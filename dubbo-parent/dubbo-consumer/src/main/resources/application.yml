@@ -1,0 +1,14 @@
+server:
+  port: 9001 #服务端口
+dubbo:
+  application:
+    name:  consumer #应用名
+  registry:
+    address: 127.0.0.1:2181 #zookeeper地址和端口
+    protocol: zookeeper
+    check: false
+  monitor:
+    protocol: register
+  consumer:
+    check:  false
+    timeout: 3000 
